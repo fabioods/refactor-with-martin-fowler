@@ -6,5 +6,19 @@
   "description": "Refactor with Martin Fowler",
   "repository": "https://github.com/fabioods/refactor-with-martin-fowler",
   "author": "Fábio dos Santos",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^17.0.17",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "tsnd --transpile-only --ignore-watch node_modules ./src/index.ts"
+  },
+  "dependencies": {
+    "@types/jest": "^27.4.0"
+  }
 }

@@ -1,4 +1,21 @@
-function statement(invoice, plays) {
+type Performance = {
+  playID: string;
+  audience: number;
+};
+
+type Invoice = {
+  customer: string;
+  performances: Performance[];
+};
+
+type Play = {
+  [key: string]: {
+    name: string;
+    type: string;
+  };
+};
+
+function statement(invoice: Invoice, plays: Play) {
   let totalAmount = 0;
   let volumeCredits = 0;
   let result = `Statement for ${invoice.customer}\n`;
@@ -42,6 +59,4 @@ function statement(invoice, plays) {
   return result;
 }
 
-module.exports = {
-  statement,
-};
+export { statement };
